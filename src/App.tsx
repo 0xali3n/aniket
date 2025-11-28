@@ -159,27 +159,4 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ icon, text }) => {
   );
 };
 
-interface SocialLinkProps {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}
-
-const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, label }) => {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-2 px-5 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300"
-      aria-label={label}
-    >
-      <span className="group-hover:scale-110 transition-transform duration-300">
-        {icon}
-      </span>
-      <span className="text-sm font-medium">{label}</span>
-    </a>
-  );
-};
-
 export default App;
