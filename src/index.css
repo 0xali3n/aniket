@@ -17,11 +17,11 @@ body {
 @keyframes bounce-glow {
   0%, 100% {
     transform: translateY(0);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3), 0 0 8px rgba(59, 130, 246, 0.2);
   }
   50% {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4), 0 0 12px rgba(59, 130, 246, 0.3);
   }
 }
 
