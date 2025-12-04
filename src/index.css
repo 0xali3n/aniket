@@ -3,44 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
 /* Body styling */
 body {
   margin: 0;
@@ -51,26 +13,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background image optimization */
-.bg-fixed {
-  background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-  .bg-fixed {
-    background-attachment: scroll;
+/* Custom animations for prominent buttons */
+@keyframes bounce-glow {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
   }
 }
 
-/* Glassmorphism effect */
-.backdrop-blur-xl {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-/* Smooth transitions */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.animate-bounce-glow {
+  animation: bounce-glow 2s ease-in-out infinite;
 }
