@@ -52,100 +52,178 @@ const Home: React.FC = () => {
     <div
       className="min-h-screen w-full relative overflow-hidden cursor-pointer"
       onClick={handleClick}
-      style={{ background: "#f5f5f5" }}
+      style={{
+        background: "linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%)",
+      }}
     >
-      {/* Background Pattern with Cartoon Drawings */}
+      {/* Subtle Background Pattern */}
       <div
-        className="absolute inset-0 opacity-8"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1.2'%3E%3Cpath d='M30 50 Q35 40 40 50 Q45 60 40 70 Q35 80 30 70 Q25 60 30 50'/%3E%3Ccircle cx='33' cy='55' r='1.5'/%3E%3Ccircle cx='37' cy='55' r='1.5'/%3E%3Cpath d='M35 65 Q35 70 30 70'/%3E%3Cpath d='M80 40 Q90 30 100 40 Q110 50 100 60 Q90 70 80 60 Q70 50 80 40'/%3E%3Ccircle cx='83' cy='45' r='1.5'/%3E%3Ccircle cx='93' cy='45' r='1.5'/%3E%3Cpath d='M88 55 Q88 60 83 60'/%3E%3Cpath d='M130 50 Q140 40 150 50 Q160 60 150 70 Q140 80 130 70 Q120 60 130 50'/%3E%3Ccircle cx='133' cy='55' r='1.5'/%3E%3Ccircle cx='143' cy='55' r='1.5'/%3E%3Cpath d='M138 65 Q138 70 133 70'/%3E%3Cpath d='M180 40 Q190 30 200 40 Q210 50 200 60 Q190 70 180 60 Q170 50 180 40'/%3E%3Ccircle cx='183' cy='45' r='1.5'/%3E%3Ccircle cx='193' cy='45' r='1.5'/%3E%3Cpath d='M188 55 Q188 60 183 60'/%3E%3Cpath d='M230 50 Q240 40 250 50 Q260 60 250 70 Q240 80 230 70 Q220 60 230 50'/%3E%3Ccircle cx='233' cy='55' r='1.5'/%3E%3Ccircle cx='243' cy='55' r='1.5'/%3E%3Cpath d='M238 65 Q238 70 233 70'/%3E%3Cpath d='M50 30 L60 20 L70 30 L65 40 L55 40 Z'/%3E%3Cpath d='M150 30 L160 20 L170 30 L165 40 L155 40 Z'/%3E%3Cpath d='M250 30 L260 20 L270 30 L265 40 L255 40 Z'/%3E%3Cpath d='M20 100 L30 90 L40 100 L35 110 L25 110 Z'/%3E%3Cpath d='M120 100 L130 90 L140 100 L135 110 L125 110 Z'/%3E%3Cpath d='M220 100 L230 90 L240 100 L235 110 L225 110 Z'/%3E%3Cpath d='M60 120 Q70 110 80 120 Q90 130 80 140 Q70 150 60 140 Q50 130 60 120'/%3E%3Ccircle cx='63' cy='125' r='1.5'/%3E%3Ccircle cx='73' cy='125' r='1.5'/%3E%3Cpath d='M68 135 Q68 140 63 140'/%3E%3Cpath d='M160 120 Q170 110 180 120 Q190 130 180 140 Q170 150 160 140 Q150 130 160 120'/%3E%3Ccircle cx='163' cy='125' r='1.5'/%3E%3Ccircle cx='173' cy='125' r='1.5'/%3E%3Cpath d='M168 135 Q168 140 163 140'/%3E%3Cpath d='M260 120 Q270 110 280 120 Q290 130 280 140 Q270 150 260 140 Q250 130 260 120'/%3E%3Ccircle cx='263' cy='125' r='1.5'/%3E%3Ccircle cx='273' cy='125' r='1.5'/%3E%3Cpath d='M268 135 Q268 140 263 140'/%3E%3Cpath d='M30 180 Q40 170 50 180 Q60 190 50 200 Q40 210 30 200 Q20 190 30 180'/%3E%3Ccircle cx='33' cy='185' r='1.5'/%3E%3Ccircle cx='43' cy='185' r='1.5'/%3E%3Cpath d='M38 195 Q38 200 33 200'/%3E%3Cpath d='M130 180 Q140 170 150 180 Q160 190 150 200 Q140 210 130 200 Q120 190 130 180'/%3E%3Ccircle cx='133' cy='185' r='1.5'/%3E%3Ccircle cx='143' cy='185' r='1.5'/%3E%3Cpath d='M138 195 Q138 200 133 200'/%3E%3Cpath d='M230 180 Q240 170 250 180 Q260 190 250 200 Q240 210 230 200 Q220 190 230 180'/%3E%3Ccircle cx='233' cy='185' r='1.5'/%3E%3Ccircle cx='243' cy='185' r='1.5'/%3E%3Cpath d='M238 195 Q238 200 233 200'/%3E%3Cpath d='M10 80 L15 75 L20 80 L18 85 L12 85 Z'/%3E%3Cpath d='M110 80 L115 75 L120 80 L118 85 L112 85 Z'/%3E%3Cpath d='M210 80 L215 75 L220 80 L218 85 L212 85 Z'/%3E%3Cpath d='M10 160 L15 155 L20 160 L18 165 L12 165 Z'/%3E%3Cpath d='M110 160 L115 155 L120 160 L118 165 L112 165 Z'/%3E%3Cpath d='M210 160 L215 155 L220 160 L218 165 L212 165 Z'/%3E%3Cpath d='M10 240 L15 235 L20 240 L18 245 L12 245 Z'/%3E%3Cpath d='M110 240 L115 235 L120 240 L118 245 L112 245 Z'/%3E%3Cpath d='M210 240 L215 235 L220 240 L218 245 L212 245 Z'/%3E%3Cpath d='M25 25 L30 20 L35 25'/%3E%3Cpath d='M125 25 L130 20 L135 25'/%3E%3Cpath d='M225 25 L230 20 L235 25'/%3E%3Cpath d='M25 275 L30 270 L35 275'/%3E%3Cpath d='M125 275 L130 270 L135 275'/%3E%3Cpath d='M225 275 L230 270 L235 275'/%3E%3Ccircle cx='45' cy='25' r='10'/%3E%3Ccircle cx='145' cy='25' r='10'/%3E%3Ccircle cx='245' cy='25' r='10'/%3E%3Ccircle cx='45' cy='275' r='10'/%3E%3Ccircle cx='145' cy='275' r='10'/%3E%3Ccircle cx='245' cy='275' r='10'/%3E%3Cpath d='M70 25 L75 20 L80 25 L78 30 L72 30 Z'/%3E%3Cpath d='M170 25 L175 20 L180 25 L178 30 L172 30 Z'/%3E%3Cpath d='M270 25 L275 20 L280 25 L278 30 L272 30 Z'/%3E%3Cpath d='M70 275 L75 270 L80 275 L78 280 L72 280 Z'/%3E%3Cpath d='M170 275 L175 270 L180 275 L178 280 L172 280 Z'/%3E%3Cpath d='M270 275 L275 270 L280 275 L278 280 L272 280 Z'/%3E%3Cpath d='M150 10 L155 5 L160 10'/%3E%3Cpath d='M150 290 L155 285 L160 290'/%3E%3Cpath d='M90 60 L95 55 L100 60'/%3E%3Cpath d='M190 60 L195 55 L200 60'/%3E%3Cpath d='M90 240 L95 235 L100 240'/%3E%3Cpath d='M190 240 L195 235 L200 240'/%3E%3Cpath d='M40 150 L45 145 L50 150'/%3E%3Cpath d='M140 150 L145 145 L150 150'/%3E%3Cpath d='M240 150 L245 145 L250 150'/%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundSize: "300px 300px",
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1'%3E%3Ccircle cx='20' cy='20' r='8'/%3E%3Ccircle cx='80' cy='20' r='8'/%3E%3Ccircle cx='20' cy='80' r='8'/%3E%3Ccircle cx='80' cy='80' r='8'/%3E%3Cpath d='M50 10 L50 90 M10 50 L90 50'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: "60px 60px",
         }}
       ></div>
 
-      {/* Header - Compact */}
-      <header className="relative z-20 bg-[#5D4E75] text-white px-3 py-2 flex items-center justify-between shadow-sm">
-        <div className="flex items-center gap-2">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.166 1.183-.835 4.05-1.179 5.37-.174.75-.519 1-.85 1.025-.72.05-1.265-.475-1.96-.93-1.08-.75-1.69-1.215-2.74-1.945-1.215-.825-.428-1.28.265-2.02.18-.19 3.245-2.975 3.305-3.23.008-.027.015-.125-.055-.185-.07-.06-.172-.04-.247-.025-.106.02-1.79 1.14-5.06 3.345-.48.33-.914.49-1.304.48-.43-.01-1.255-.24-1.87-.44-.755-.245-1.355-.375-1.305-.79.027-.21.405-.425 1.115-.645 4.326-1.885 7.22-3.13 8.68-3.735 4.24-1.76 5.12-2.07 5.695-2.09.125-.005.405.03.56.19.14.14.19.33.21.465.02.14.04.46.02.71z" />
-          </svg>
-          <span className="font-semibold text-sm">Telegram</span>
-        </div>
-        <button
-          onClick={handleJoinClick}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded-md font-semibold text-xs transition-all duration-200 hover:scale-105 active:scale-95 shadow-md"
-        >
-          DOWNLOAD
-        </button>
-      </header>
+      {/* Main Content - Premium Card */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-4 sm:py-6">
+        <div className="w-full max-w-md">
+          {/* Premium Card with Enhanced Shadow */}
+          <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-5 sm:p-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] border border-gray-700/50 backdrop-blur-sm">
+            {/* Inner Vignette Effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none"></div>
 
-      {/* Main Content - Compact */}
-      <div className="relative z-10 min-h-[calc(100vh-40px)] flex items-center justify-center px-4 py-6">
-        <div className="bg-[#1a1a1a] rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-gray-800/50">
-          {/* Profile Picture */}
-          <div className="flex flex-col items-center mb-4">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-white/10 shadow-lg">
-              <img
-                src="/image.png"
-                alt="Aniket Roy"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <div className="relative z-10">
+              {/* Profile Section */}
+              <div className="flex flex-col items-center mb-5">
+                {/* Profile Picture with Premium Ring & Glow */}
+                <div className="relative mb-3">
+                  {/* Outer Glow */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 opacity-60 blur-2xl animate-pulse"></div>
+                  {/* Avatar Ring */}
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-[3px] border-white/30 shadow-2xl ring-4 ring-blue-500/20">
+                    <img
+                      src="/image.png"
+                      alt="Aniket Roy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Verified Badge */}
+                  <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1 shadow-lg border-2 border-gray-900">
+                    <svg
+                      className="w-3.5 h-3.5 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
 
-            {/* Channel Name */}
-            <div className="text-center">
-              <h1 className="text-2xl font-bold text-white mb-1 flex items-center justify-center gap-2 flex-wrap tracking-tight">
-                <span>Aniket Roy™</span>
-                <span className="text-gray-300 font-normal text-lg">
-                  [ Official ]
-                </span>
-              </h1>
-              <p className="text-gray-400 text-xs font-medium">
-                30 888 subscribers
-              </p>
+                {/* Channel Name with Better Typography */}
+                <div className="text-center mb-3">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-white mb-1.5 flex items-center justify-center gap-2 flex-wrap tracking-tight">
+                    <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+                      Aniket Roy™
+                    </span>
+                    <span className="text-gray-400 font-normal text-lg sm:text-xl">
+                      [ Official ]
+                    </span>
+                  </h1>
+
+                  {/* Social Proof Badge */}
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-800/60 rounded-full border border-gray-700/50 mt-2">
+                    <svg
+                      className="w-3.5 h-3.5 text-blue-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span className="text-white text-xs font-semibold">
+                      30.9K subscribers
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-4"></div>
+
+              {/* Disclaimer */}
+              <div className="text-center mb-4">
+                <p className="text-white font-semibold text-sm tracking-wide">
+                  We Do Not Support Gambling. 🦅
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-4"></div>
+
+              {/* Value Proposition - Compact */}
+              <div className="mb-5">
+                <h2 className="text-white text-lg sm:text-xl font-bold text-center mb-3">
+                  Welcome to Cricket Prediction Center 🏏
+                </h2>
+
+                {/* Benefits as Compact Bullets */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center gap-2">
+                    <svg
+                      className="w-4 h-4 text-blue-400 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <p className="text-gray-300 text-sm">
+                      Daily match insights & analysis
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      className="w-4 h-4 text-blue-400 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <p className="text-gray-300 text-sm">
+                      Pitch reports & fantasy tips
+                    </p>
+                  </div>
+                </div>
+
+                {/* Trust Badges - Compact */}
+                <div className="flex items-center justify-center gap-3 text-gray-400 text-xs pt-1">
+                  <span className="font-medium">No spam</span>
+                  <span className="text-gray-600">•</span>
+                  <span className="font-medium">Quality content</span>
+                </div>
+              </div>
+
+              {/* Primary CTA - Benefit-Driven */}
+              <div className="mb-3">
+                <button
+                  onClick={handleJoinClick}
+                  className="relative w-full bg-gradient-to-r from-[#2f6bff] via-[#5b4bff] to-[#2f6bff] hover:from-[#2563eb] hover:via-[#4f46e5] hover:to-[#2563eb] text-white font-bold py-3.5 sm:py-4 px-6 rounded-xl text-center transition-all duration-200 transform hover:-translate-y-1 active:translate-y-0 shadow-[0_8px_24px_rgba(43,51,99,0.35)] hover:shadow-[0_14px_34px_rgba(43,51,99,0.45)] overflow-hidden group focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+                >
+                  {/* Animated gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+
+                  <span className="relative z-10 flex items-center justify-center gap-2 text-sm sm:text-base tracking-wide">
+                    Join & Get Today's Match Tips
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.166 1.183-.835 4.05-1.179 5.37-.174.75-.519 1-.85 1.025-.72.05-1.265-.475-1.96-.93-1.08-.75-1.69-1.215-2.74-1.945-1.215-.825-.428-1.28.265-2.02.18-.19 3.245-2.975 3.305-3.23.008-.027.015-.125-.055-.185-.07-.06-.172-.04-.247-.025-.106.02-1.79 1.14-5.06 3.345-.48.33-.914.49-1.304.48-.43-.01-1.255-.24-1.87-.44-.755-.245-1.355-.375-1.305-.79.027-.21.405-.425 1.115-.645 4.326-1.885 7.22-3.13 8.68-3.735 4.24-1.76 5.12-2.07 5.695-2.09.125-.005.405.03.56.19.14.14.19.33.21.465.02.14.04.46.02.71z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              {/* Trust & Friction Reduction - Compact */}
+              <div className="text-center">
+                <p className="text-gray-500 text-xs">
+                  Redirects to Telegram • No payment required
+                </p>
+              </div>
             </div>
           </div>
-
-          {/* Disclaimer */}
-          <div className="text-center mb-4 border-b border-gray-700/50 pb-3">
-            <p className="text-white font-semibold text-sm tracking-wide">
-              We Do Not Support Gambling. 🦅
-            </p>
-          </div>
-
-          {/* Description */}
-          <div className="space-y-2 mb-4 text-white">
-            <p className="text-sm font-medium text-center">
-              Welcome to Cricket Prediction Center 🏏
-            </p>
-            <p className="text-gray-300 text-xs text-center leading-relaxed">
-              Match analysis, pitch reports & fantasy tips for cricket lovers.
-            </p>
-            <div className="flex items-center justify-center gap-2 text-gray-400 text-xs pt-1">
-              <span className="font-medium">No spam</span>
-              <span>•</span>
-              <span className="font-medium">Quality content</span>
-            </div>
-          </div>
-
-          {/* Join Button - Compact */}
-          <button
-            onClick={handleJoinClick}
-            className="relative w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 hover:from-blue-600 hover:via-blue-700 hover:to-blue-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl hover:shadow-blue-500/30 overflow-hidden group"
-          >
-            <span className="relative z-10 flex items-center justify-center gap-2 text-sm tracking-wide">
-              JOIN CHANNEL
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.166 1.183-.835 4.05-1.179 5.37-.174.75-.519 1-.85 1.025-.72.05-1.265-.475-1.96-.93-1.08-.75-1.69-1.215-2.74-1.945-1.215-.825-.428-1.28.265-2.02.18-.19 3.245-2.975 3.305-3.23.008-.027.015-.125-.055-.185-.07-.06-.172-.04-.247-.025-.106.02-1.79 1.14-5.06 3.345-.48.33-.914.49-1.304.48-.43-.01-1.255-.24-1.87-.44-.755-.245-1.355-.375-1.305-.79.027-.21.405-.425 1.115-.645 4.326-1.885 7.22-3.13 8.68-3.735 4.24-1.76 5.12-2.07 5.695-2.09.125-.005.405.03.56.19.14.14.19.33.21.465.02.14.04.46.02.71z" />
-              </svg>
-            </span>
-            {/* Subtle shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-          </button>
         </div>
       </div>
     </div>
